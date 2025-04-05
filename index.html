@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wasteland Warriors - Набор в клан Rust</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .bg-rust {
+            background-image: url('https://pbs.twimg.com/media/FUHTRmzXEAA_nP6.jpg:large');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .card-glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn-rust {
+            background: linear-gradient(45deg, #b87333, #80461B);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-rust:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(128, 70, 27, 0.3);
+        }
+        
+        .animate-pulse-slow {
+            animation: pulse 3s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+        
+        .text-rust {
+            color: #00687d;
+        }
+    </style>
+</head>
+<body class="bg-rust min-h-screen text-white font-sans">
+    <!-- Навигация -->
+    <nav class="bg-black bg-opacity-80 py-4 px-6 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-skull text-2xl text-rust"></i>
+                <span class="text-xl font-bold">Wasteland Warriors</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="hover:text-rust transition">О клане</a>
+                <a href="#requirements" class="hover:text-rust transition">Требования</a>
+                <a href="#join" class="hover:text-rust transition">Вступить</a>
+                <a href="#contacts" class="hover:text-rust transition">Контакты</a>
+            </div>
+            <button class="md:hidden text-xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Герой секция -->
+    <section class="py-20 px-6 text-center">
+        <div class="container mx-auto max-w-4xl">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-pulse-slow">
+                ВСТУПАЙ В <span class="text-rust">Ogabek</span>
+            </h1>
+            <p class="text-xl mb-10 opacity-90">
+                Стань частью самого опасного клана в Rust. Вместе мы построим империю и будем править вайпом!
+            </p>
+            <a href="#join" class="btn-rust py-3 px-8 rounded-full text-white font-bold inline-block">
+                Подать заявку <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- О клане -->
+    <section id="about" class="py-16 px-6 bg-black bg-opacity-70">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl font-bold mb-12 text-center">
+                <span class="border-b-2 border-rust pb-2">О НАШЕМ КЛАНЕ</span>
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-glass p-6 rounded-lg">
+                    <div class="text-4xl text-rust mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Защита</h3>
+                    <p>Наш клан - это семья. Мы всегда прикрываем спину друг другу и защищаем нашу базу от рейдов.</p>
+                </div>
+                
+                <div class="card-glass p-6 rounded-lg">
+                    <div class="text-4xl text-rust mb-4">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Достижения</h3>
+                    <p>5 вайпов подряд в топ-3 сервера. Десятки успешных рейдов и постоянный контроль ключевых зон.</p>
+                </div>
+                
+                <div class="card-glass p-6 rounded-lg">
+                    <div class="text-4xl text-rust mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                        <h3 class="text-xl font-bold mb-2">Комьюнити</h3>
+                        <p>Активный Discord с 200+ участниками. Ежедневные ивенты и турниры с призами.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Требования -->
+    <section id="requirements" class="py-16 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold mb-12 text-center">
+                <span class="border-b-2 border-rust pb-2">ТРЕБОВАНИЯ К НОВИЧКАМ</span>
+            </h2>
+            
+            <div class="bg-black bg-opacity-70 rounded-lg p-8">
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-rust mt-1 mr-3"></i>
+                        <span>Опыт игры в Rust от 500 часов</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-rust mt-1 mr-3"></i>
+                        <span>Возраст 13+</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-rust mt-1 mr-3"></i>
+                        <span>Наличие микрофона и Discord</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-rust mt-1 mr-3"></i>
+                        <span>Готовность играть минимум 4 часа в день во время вайпа</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-rust mt-1 mr-3"></i>
+                        <span>Отсутствие банов на популярных серверах</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-rust mt-1 mr-3"></i>
+                        <span>Готовность подчиняться правилам клана и стратегии лидеров</span>
+                    </li>
+                </ul>
+                
+                <div class="mt-8 p-4 bg-rust bg-opacity-20 rounded-lg border border-rust">
+                    <p class="font-bold mb-2">Бонусы для опытных игроков:</p>
+                    <p>Если у вас есть опыт в строительстве неприступных баз или вы снайпер с подтверждёнными хедшотами - сообщите об этом при подаче заявки!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Как вступить -->
+    <section id="join" class="py-16 px-6 bg-black bg-opacity-70">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold mb-12 text-center">
+                <span class="border-b-2 border-rust pb-2">КАК ВСТУПИТЬ</span>
+            </h2>
+            
+            <div class="card-glass rounded-lg p-8">
+                <form id="applicationForm" class="space-y-6">
+                    <div>
+                        <label for="nickname" class="block mb-2 font-medium">Ваш никнейм в Steam</label>
+                        <input type="text" id="nickname" required class="w-full px-4 py-3 bg-black bg-opacity-50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-rust">
+                    </div>
+                    
+                    <div>
+                        <label for="hours" class="block mb-2 font-medium">Количество часов в Rust</label>
+                        <input type="number" id="hours" required class="w-full px-4 py-3 bg-black bg-opacity-50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-rust">
+                    </div>
+                    
+                    <div>
+                        <label for="age" class="block mb-2 font-medium">Ваш возраст</label>
+                        <input type="number" id="age" required class="w-full px-4 py-3 bg-black bg-opacity-50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-rust">
+                    </div>
+                    
+                    <div>
+                        <label for="role" class="block mb-2 font-medium">Предпочитаемая роль</label>
+                        <select id="role" class="w-full px-4 py-3 bg-black bg-opacity-50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-rust">
+                            <option value="farmer">Фермер/Строитель</option>
+                            <option value="pvp">PVP-игрок</option>
+                            <option value="sniper">Снайпер</option>
+                            <option value="raider">Рейдер</option>
+                            <option value="leader">Лидер/Стратег</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="about" class="block mb-2 font-medium">Расскажите о себе</label>
+                        <textarea id="about" rows="4" class="w-full px-4 py-3 bg-black bg-opacity-50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-rust" placeholder="Ваш опыт, достижения, почему хотите вступить в наш клан..."></textarea>
+                    </div>
+                    
+                    <div>
+                        <label for="discord" class="block mb-2 font-medium">Ваш Discord</label>
+                        <input type="text" id="discord" required class="w-full px-4 py-3 bg-black bg-opacity-50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-rust">
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <input type="checkbox" id="agree" required class="w-5 h-5 text-rust bg-black bg-opacity-50 border-gray-600 rounded focus:ring-rust">
+                        <label for="agree" class="ml-2 text-sm">Я согласен с правилами клана и подтверждаю, что вся информация достоверна</label>
+                    </div>
+                    
+                    <button type="submit" class="btn-rust w-full py-4 rounded-lg font-bold text-lg">
+                        Отправить заявку <i class="fas fa-paper-plane ml-2"></i>
+                    </button>
+                </form>
+                
+                <div id="successMessage" class="hidden mt-6 p-4 bg-green-900 bg-opacity-70 rounded-lg text-center">
+                    <i class="fas fa-check-circle text-3xl text-green-400 mb-2"></i>
+                    <p class="font-bold text-xl">Заявка отправлена!</p>
+                    <p>Мы рассмотрим вашу заявку в течение 24 часов и свяжемся с вами в Discord.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts" class="py-16 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold mb-12 text-center">
+                <span class="border-b-2 border-rust pb-2">КОНТАКТЫ</span>
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card-glass p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-comment-dots text-rust mr-3"></i> Наш Discord
+                    </h3>
+                    <a href="https://discord.com/channels/1355478853103128576/1355478853103128579" target="_blank" class="inline-block bg-indigo-900 bg-opacity-50 px-4 py-2 rounded-lg hover:bg-opacity-70 transition">
+                        <i class="fab fa-discord mr-2"></i> Присоединиться
+                    </a>
+                </div>
+                
+                <div class="card-glass p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-envelope text-rust mr-3"></i> Для вопросов
+                    </h3>
+                    <a href="https://t.me/Ogabek_haliljanov class="inline-block bg-gray-800 bg-opacity-50 px-4 py-2 rounded-lg hover:bg-opacity-70 transition">
+                        <i class="fas fa-at mr-2"></i>Ogabek_haliljanov
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-black bg-opacity-90 py-8 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <i class="fas fa-skull text-2xl text-rust"></i>
+                    <span class="text-xl font-bold">Wasteland Warriors</span>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-rust transition">
+                        <i class="fab fa-steam text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-rust transition">
+                        <i class="fab fa-discord text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-rust transition">
+                        <i class="fab fa-telegram text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-rust transition">
+                        <i class="fab fa-youtube text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-6 border-t border-gray-800 text-center text-gray-500 text-sm">
+                <p>© 2023 Wasteland Warriors. Все права защищены. Мы не аффилированы с Facepunch Studios.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('applicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Собираем данные формы
+            const formData = {
+                nickname: document.getElementById('nickname').value,
+                hours: document.getElementById('hours').value,
+                age: document.getElementById('age').value,
+                role: document.getElementById('role').value,
+                about: document.getElementById('about').value,
+                discord: document.getElementById('discord').value
+            };
+            
+            // Здесь должен быть код для отправки данных на сервер
+            // Для примера используем Telegram Bot API
+            
+            const botToken = '8099077895:AAGhajhA-n2fHxm3MWC00jtakwRwmLvY2rA';
+            const chatId = '6812593469';
+            const message = `Новая заявка в клан!\n\nНик: ${formData.nickname}\nЧасы: ${formData.hours}\nВозраст: ${formData.age}\nРоль: ${formData.role}\nDiscord: ${formData.discord}\nО себе: ${formData.about}`;
+            
+            // В реальном проекте используйте fetch или axios для отправки на ваш сервер
+            // Это пример для демонстрации:
+            fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message,
+                    parse_mode: 'HTML'
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Message sent to Telegram:', data);
+                // Показываем сообщение об успехе
+                document.getElementById('applicationForm').classList.add('hidden');
+                document.getElementById('successMessage').classList.remove('hidden');
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Произошла ошибка при отправке заявки. Пожалуйста, попробуйте позже или свяжитесь с нами в Discord.');
+            });
+            
+            // В реальном проекте замените этот код на отправку на ваш сервер,
+            // который уже будет отправлять сообщение в Telegram
+        });
+        
+        // Плавная прокрутка для якорных ссылок
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
